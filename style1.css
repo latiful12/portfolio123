@@ -1,0 +1,162 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center; /* Center the content */
+}
+
+body.light-mode {
+  background-color: #e8f0fa; /* Biru soft sangat muda */
+  color: #2d3e50; /* Biru tua untuk teks */
+}
+
+body.dark-mode {
+  background-color: #1a2335; /* Biru navy gelap */
+  color: #d9e8f6; /* Teks biru pucat */
+}
+
+/* Header Section (Title and Mode Buttons) */
+.header {
+  margin-bottom: 20px; /* Add space below the header */
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4682b4; /* Biru klasik */
+  text-shadow: 0 0 8px rgba(70, 130, 180, 0.7), 
+               0 0 16px rgba(70, 130, 180, 0.5), 
+               0 0 24px rgba(70, 130, 180, 0.3); /* Efek glow biru */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+body.dark-mode .title {
+  color: #a1c4f4; /* Biru terang */
+  text-shadow: 0 0 8px rgba(161, 196, 244, 0.7), 
+               0 0 16px rgba(161, 196, 244, 0.5), 
+               0 0 24px rgba(161, 196, 244, 0.3); /* Efek glow */
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Center the icons */
+}
+
+.mode-buttons i {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #4682b4; /* Default warna biru klasik */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mode-buttons i:hover {
+  color: #365e8a; /* Biru lebih gelap */
+  transform: scale(1.1);
+}
+
+body.dark-mode .mode-buttons i {
+  color: #a1c4f4; /* Biru terang untuk dark mode */
+}
+
+body.dark-mode .mode-buttons i:hover {
+  color: #d9e8f6; /* Biru pucat untuk hover di dark mode */
+}
+
+/* Calculator Container */
+.calculator {
+  background: #ffffff; /* Warna putih hangat */
+  border-radius: 15px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1), 
+              0px 0px 15px 5px rgba(70, 130, 180, 0.3); /* Efek border glow biru */
+  border: 2px solid rgba(70, 130, 180, 0.6); /* Warna biru glowing */
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode .calculator {
+  background: #24334a; /* Biru navy lebih terang */
+  border: 2px solid rgba(161, 196, 244, 0.6); /* Glow biru terang */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5), 
+              0px 0px 15px 5px rgba(161, 196, 244, 0.3);
+}
+
+.calculator:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1), 
+              0px 0px 25px 8px rgba(70, 130, 180, 0.5); /* Glow lebih terang saat hover */
+}
+
+/* Display */
+.display {
+  margin-bottom: 20px;
+}
+/* Display */
+#result {
+  width: calc(100% - 30px);
+  font-size: 2rem;
+  padding: 15px;
+  text-align: right;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #f2f7fc; /* Biru muda sangat lembut */
+  color: #2d3e50; /* Darker text color in light mode */
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #result {
+  background-color: #1a2335; /* Biru gelap */
+  color: #ffffff; /* White text color in dark mode */
+}
+
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  background: linear-gradient(145deg, #b0cfe8, #90b8d8); /* Gradasi biru soft */
+  color: #ffffff;
+  border: none;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #8eb3db; /* Biru lebih terang */
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode button {
+  background: linear-gradient(145deg, #365e8a, #2d4566); /* Gradasi biru gelap */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), 
+              0px 0px 10px rgba(161, 196, 244, 0.6);
+}
+
+body.dark-mode button:hover {
+  background: #507ba7; /* Biru lebih terang */
+  box-shadow: 0px 8px 15px rgba(161, 196, 244, 0.8);
+}
